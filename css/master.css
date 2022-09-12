@@ -34,11 +34,27 @@ body {
     background-color: white;
     text-align: center;
     cursor: pointer;
+    border-radius: 0 50% 50% 0;
 }
 
 .settings .gear i{
     padding: 8px 0;
     width: 30px;
+}
+
+.settings .gear.open{
+    display: none;
+}
+
+.settings .close{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    margin: 0;
+    padding: 5px;
+    color: red;
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 .settings .option-box{
@@ -91,6 +107,32 @@ body {
 
 .settings .option-box .colors-list li:nth-child(5){
     background-color: #ffeb3b;
+}
+
+.settings .option-box .enable,
+.settings .option-box .disable{
+    width: 70px;
+    background-color: darkblue;
+    color: white;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.6s;
+}
+
+.settings .random span.active{
+    opacity: 1;
+    border: 1px solid black;
+}
+
+.settings .option-box .enable{
+    background-color: #4caf50;
+}
+.settings .option-box .disable{
+    background-color: #f44336;
 }
 
 /* End Settings */
