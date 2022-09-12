@@ -10,6 +10,13 @@ body {
     --main-color : #00bcd4;
 }
 
+.con{
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+}
+
 /*Start Settings*/
 
 .settings{
@@ -25,6 +32,7 @@ body {
 
 .settings.open{
     left: 0;
+    box-shadow: 0px 0px 20px 0 #333;
 }
 
 .settings .gear{
@@ -225,3 +233,95 @@ body {
 
 
 /* End Landing */
+
+/*Start About Us*/
+
+.about{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+}
+
+.about .info-box{
+    flex: 1;
+    padding: 30px;
+}
+
+.about .info-box h1{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    transition: 0.6s;
+    margin: 0 0 25px;
+}
+
+.about .info-box p{
+    line-height: 1.7;
+    color: #777;
+    margin: 0;
+}
+
+.about .img-box{
+    width: 500px;
+    flex: 1;
+    text-align: center;
+}
+
+.about .img-box img{
+    max-width: 300x;
+}
+
+/* End About Us */
+
+
+/*Start Our Skills*/
+
+.skills{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #eee;
+}
+
+.skills h1{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    transition: 0.6s;
+    margin: 0 0 50px;
+    text-align: center;
+}
+
+.skills .skills-box{
+    background-color: white;
+    display: flex;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.skills .skills-box .skill-name{
+    font-weight: bold;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.skills .skills-box .skill-progress{
+    height: 30px;
+    width: calc(100% - 110px);
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills .skills-box .skill-progress span{
+    position: absolute;
+    background-color: var(--main-color);
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+}
+
+/* End Our Skills */
