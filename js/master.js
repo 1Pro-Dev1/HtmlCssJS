@@ -119,3 +119,86 @@ function randomFuncion() {
     }, 5000)
 }
 
+
+
+
+let skills = document.querySelector(".skills");
+
+
+window.onscroll = function (){
+
+    let scrollOffset = skills.offsetTop;
+    let scrollOuter = skills.offsetHeight;
+    let winHeight = this.innerHeight;
+    let winScrlTop = this.pageYOffset;
+
+
+    if (winScrlTop > (scrollOffset + scrollOuter - winHeight)) {
+        
+        let allSkills = document.querySelectorAll(".skills-box .skill-progress span");
+
+        allSkills.forEach(skill =>{
+            skill.style.width = skill.dataset.progress;
+        })
+
+    }
+
+};
+
+
+
+let gallery = document.querySelectorAll(".gallery .imgs-box img");
+
+gallery.forEach(img => {
+    img.addEventListener("click", (e) =>{
+
+        let overlay = document.createElement("div");
+
+        overlay.className = "popup-overlay";
+
+        document.body.appendChild(overlay);
+
+        let popupBox = document.createElement("div");
+        
+        popupBox.className = "popup-box";
+
+        if (img.alt !== null) {
+            let imgHead = document.createElement("h1");
+            
+            let imgTxt = document.createTextNode(img.alt);
+
+            imgHead.appendChild(imgTxt);
+
+            popupBox.appendChild(imgHead);
+        }
+
+
+        let popupImg = document.createElement("img")
+
+        popupImg.src = img.src;
+
+        popupBox.appendChild(popupImg);
+        
+        document.body.appendChild(popupBox);
+
+        let closeBtn = document.createElement("span");
+
+        let CloseTxt = document.createTextNode("X");
+
+        closeBtn.appendChild(CloseTxt);
+
+        closeBtn.className = "close-btn";
+
+        popupBox.appendChild(closeBtn);
+    })
+});
+
+document.addEventListener("click", function (e) {
+    
+    if (e.target.className == "close-btn") {
+        e.target.parentNode.remove()
+
+        document.querySelector(".popup-overlay").remove()
+    }
+
+})
