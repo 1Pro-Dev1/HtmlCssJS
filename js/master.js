@@ -107,6 +107,51 @@ randomBackEl.forEach(span => {
     })
 })
 
+const bulletSpans = document.querySelectorAll('.settings .bullet span');
+const bulletsCon = document.querySelector(".nav-bullets");
+const bulletStorage = localStorage.getItem("Bullets_Show");
+
+if (bulletStorage !== null) {
+    bulletSpans.forEach(span =>{
+        span.classList.remove("active");
+    });
+    if (bulletStorage === "show") {
+        bulletsCon.style.display = "block";
+        document.querySelector(".bullet .enable").classList.add("active");
+        console.log(document.querySelector(".bullet .enable"))
+    }
+    if (bulletStorage === "hide") {
+        bulletsCon.style.display = "none";
+        document.querySelector(".bullet .disable").classList.add("active");
+    }
+}
+
+bulletSpans.forEach(span =>{
+    span.addEventListener("click", (e) =>{
+        clickSound.play();
+
+        if (span.dataset.display === "show") {
+            bulletsCon.style.display = "block";
+            localStorage.setItem("Bullets_Show", "show");
+        }
+        if (span.dataset.display === "hide") {
+            bulletsCon.style.display = "none";
+            localStorage.setItem("Bullets_Show", "hide");
+        }
+        e.target.parentElement.querySelectorAll(".active").forEach(element => {
+            element.classList.remove("active")
+        })
+        e.target.classList.add("active")
+    })
+})
+
+const reset = document.querySelector(".reset");
+
+reset.onclick = function (){
+    localStorage.clear();
+    location.reload();
+}
+
 
 let landing = document.querySelector(".landing");
 
@@ -208,15 +253,22 @@ document.addEventListener("click", function (e) {
 
 
 const bullets = document.querySelectorAll(".nav-bullets .bullet");
+const links = document.querySelectorAll(".header a");
+console.log(links)
 
-
-bullets.forEach(bullet =>{
-    bullet.addEventListener("click", (e) =>{
-
-        document.querySelector(e.target.dataset.sec).scrollIntoView({
-            behavior: "smooth"
+function ScrollFunction(elements) {
+    elements.forEach(ele =>{
+        ele.addEventListener("click", (e) =>{
+    
+            document.querySelector(e.target.dataset.sec).scrollIntoView({
+                behavior: "smooth"
+            })
+    
         })
+    });
+}
 
-    })
-});
+ScrollFunction(bullets);
+ScrollFunction(links);
+
 

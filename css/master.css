@@ -131,7 +131,8 @@ body {
     transition: 0.6s;
 }
 
-.settings .random span.active{
+.settings .random span.active,
+.settings .bullet span.active{
     opacity: 1;
     border: 1px solid black;
 }
@@ -141,6 +142,18 @@ body {
 }
 .settings .option-box .disable{
     background-color: #f44336;
+}
+
+.reset{
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 15px auto;
+    display: block;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 /* End Settings */
@@ -245,16 +258,19 @@ body {
     margin-left: 15px;
 }
 
-.landing .header ul li a:hover,
+.landing .header ul li a:hover{
+    color: var(--main-color);
+}
+
 .landing .header ul li a.active{
     color: var(--main-color);
-    transition: 1s;
 }
 
 .landing .header ul li a {
     text-decoration: none;
     color: white;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .landing .intro {
