@@ -272,3 +272,11 @@ ScrollFunction(bullets);
 ScrollFunction(links);
 
 
+const headBtn = document.querySelector(".links-con button");
+
+const navList = document.querySelector(".landing .header ul")
+
+
+headBtn.onclick= function () {
+    navList.classList.toggle("open")
+}

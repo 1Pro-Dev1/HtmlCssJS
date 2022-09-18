@@ -71,14 +71,21 @@
             <div class="con">
                 <div class="header">
                     <div class="logo">LOGO</div>
-                    <ul>
-                        <li><a data-sec=".about">About</a></li>
-                        <li><a data-sec=".skills">Skills</a></li>
-                        <li><a data-sec=".gallery">Gallery</a></li>
-                        <li><a data-sec=".timeline">Timeline</a></li>
-                        <li><a data-sec=".features">Features</a></li>
-                        <li><a data-sec=".testimonials">Testimonials</a></li>
-                    </ul>
+                    <div class="links-con">
+                        <ul>
+                            <li><a data-sec=".about">About</a></li>
+                            <li><a data-sec=".skills">Skills</a></li>
+                            <li><a data-sec=".gallery">Gallery</a></li>
+                            <li><a data-sec=".timeline">Timeline</a></li>
+                            <li><a data-sec=".features">Features</a></li>
+                            <li><a data-sec=".testimonials">Testimonials</a></li>
+                        </ul>
+                        <button>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="intro">
@@ -107,8 +114,8 @@
                         ea eius magni, provident nisi illo accusantium distinctio assumenda!
                     </p>
                 </div>
-                <div style="width: 500px" class="img-box">
-                    <img style="max-width: 500px;" src="img/about.jpg" alt="About us img">
+                <div style="max-width: 100%" class="img-box">
+                    <img style="max-width: 100%;" src="img/about.jpg" alt="About us img">
                 </div>
             </div>
         </div>
@@ -276,34 +283,61 @@
         <div class="testimonials">
             <div class="con">
                 <h1>Testimonials</h1>
-                <div class="ts-box">
-                    <p>Random review for random person working at random company Random review for random person working at random company</p>
-                    <div class="info">
-                        <img style="width: 80px; height: 80px;" src="img/user.png" alt="">
-                        <h4>Someone Random</h4>
-                        <p>CEO at Random Company</p>
+                <div class="flex">
+                    <div class="ts-box">
+                        <p>Random review for random person working at random company Random review for random person working at random company</p>
+                        <div class="info">
+                            <img style="width: 80px; height: 80px;" src="img/user.png" alt="">
+                            <h4>Someone Random</h4>
+                            <p>CEO at Random Company</p>
+                        </div>
                     </div>
-                </div>
-                <div class="ts-box">
-                    <p>Random review for random person working at random company Random review for random person working at random company</p>
-                    <div class="info">
-                        <img style="width: 80px; height: 80px;" src="img/user.png" alt="">
-                        <h4>Someone Random</h4>
-                        <p>CEO at Random Company</p>
+                    <div class="ts-box">
+                        <p>Random review for random person working at random company Random review for random person working at random company</p>
+                        <div class="info">
+                            <img style="width: 80px; height: 80px;" src="img/user.png" alt="">
+                            <h4>Someone Random</h4>
+                            <p>CEO at Random Company</p>
+                        </div>
                     </div>
-                </div>
-                <div class="ts-box">
-                    <p>Random review for random person working at random company Random review for random person working at random company</p>
-                    <div class="info">
-                        <img style="width: 80px; height: 80px;" src="img/user.png" alt="">
-                        <h4>Someone Random</h4>
-                        <p>CEO at Random Company</p>
+                    <div class="ts-box">
+                        <p>Random review for random person working at random company Random review for random person working at random company</p>
+                        <div class="info">
+                            <img style="width: 80px; height: 80px;" src="img/user.png" alt="">
+                            <h4>Someone Random</h4>
+                            <p>CEO at Random Company</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- End Testimonials -->
+
+        <!--Start Contact Us-->
+
+        <div class="contact">
+            <div class="overlay"></div>
+            <div class="con">
+                <h1>Contact Us</h1>
+                <form action="">
+                    <div class="left">
+                        <input type="text" name="Username" placeholder="Username">
+                        <input type="number" name="phone" placeholder="Phone Number">
+                        <input type="email" name="email" placeholder="E-mail">
+                        <input type="text" name="subject" placeholder="Subject">
+                    </div>
+                    <div class="right">
+                        <textarea name="msg" placeholder="Message"></textarea>
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- End Contact Us -->
+
+        <div class="footer">Made With &lt3 by Mohamed Hossam</div>
 
         <script src="js/master.js"></script>
     </body>
